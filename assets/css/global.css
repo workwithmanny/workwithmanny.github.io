@@ -1,0 +1,210 @@
+/* ============= WEB BROWSER RESETS ============ */
+* { margin: 0; padding: 0; border: none }
+*, *::before, *::after { box-sizing: border-box }
+html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
+scroll-behavior: smooth; scroll-padding-top: 20px }
+body { line-height: 1.5; min-height: 100vh; 
+margin-left: auto; margin-right: auto; min-height: 100vh }  
+@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
+@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
+nav, header, section, footer { width: 100% }
+nav *:last-child, header *:last-child, section *:last-child, footer *:last-child { margin-bottom: 0 }
+img { width: 100%; height: auto; display: block }
+input, button, textarea, select { font: inherit }
+h1, h2, h3, h4, p, li { word-break: break-word; hyphens: auto }
+
+/* ============ CUSTOM PROPERTIES ============  */
+:root {
+    /* ==== Color variables ==== */
+    --black-000: #000000;
+    --white-000: #ffffff;
+    --trans-000: transparent;
+
+    --slate-050: #ECEFF1;
+    --slate-100: #CFD8DC;
+    --slate-200: #B0BEC5;
+    --slate-300: #90A4AE;
+    --slate-400: #78909C;
+    --slate-500: #607D8B;
+    --slate-600: #546E7A;
+    --slate-700: #455A64;
+    --slate-800: #37474F;
+    --slate-900: #263238;
+
+    --blue-050: #E3F2FD;
+    --blue-100: #BBDEFB;
+    --blue-200: #90CAF9;
+    --blue-300: #64B5F6;
+    --blue-400: #42A5F5;
+    --blue-500: #2196F3;
+    --blue-600: #1E88E5;
+    --blue-700: #1976D2;
+    --blue-800: #1565C0;
+    --blue-900: #0D47A1;
+
+    /* Other color variables remain unchanged */
+    /* ==== Nicer than browser default fonts ==== */
+    --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+    --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+    --global-font: var(--font-sans);
+
+    /* ==== Fluid font sizes ==== */
+    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+}
+
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Global font */
+body {
+    font-family: var(--global-font);
+    background-color: #31a894; /* Set background color to a dark charcoal color */
+}
+
+/* ================= ENDS ================ */
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 78px;
+    font-weight: normal;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 42px;
+    letter-spacing: 6px;
+    margin-bottom: 48px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+a { color: darkgreen; }
+
+/* ============= CSS FOR HERO BLOCK ============= */
+
+header {
+    /* Flexbox to center child div vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Spacing around child div inside hero block */
+    padding: 0 20% 4% 20%;
+    /* Optionally, center child div horizontally */
+    text-align: center;
+     
+    /* Updated gradient colors for header */
+    background-image: linear-gradient(var(--blue-500), var(--blue-300)); 
+    position: relative;
+}
+
+/* Set minimum height of hero block */
+@media (min-width: 768px) { 
+    header { min-height: 80vh } 
+}
+@media (max-width: 767px) { 
+    header { min-height: 500px } 
+}
+
+.hero-text-container h1, 
+.hero-text-container h2 {
+    line-height: 1.2;
+    /* Text color remains unchanged */
+    text-shadow: 2px 2px #ffffff;
+}
+
+.hero-text-container h1 {
+    /* Space under h1 and above h2 */
+    margin-bottom: 24px;
+    /* Set main heading to extra large size */
+    font-size: calc(var(--fs-xxxl) * 1.5);
+    /* When text extra large, decrease spacing between characters  */
+    letter-spacing: -4px;
+}
+
+.hero-text-container h2 {
+    /* Optionally, remove default weight of 'bold' from h2 */
+    font-weight: normal;
+    font-size: var(--fs-xl);
+    /* Optionally, change text in h2 to all capital letters */
+    text-transform: uppercase;
+}
+
+/* ======== END CSS FOR HERO BLOCK ======== */
+
+.slide-in-top {
+	animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Slide-in animations */
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.slide-in-left {
+	animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+.hero-text-container {
+    position: relative; 
+    z-index: 2;
+}    
+    
+.hero-bg-media {
+    position: absolute; 
+    top: 0; right: 0; bottom: 0; left: 0; 
+    z-index: 0;
+}
+                    
+.hero-bg-media * {
+    object-fit: cover; width: 100%; height: 100%;
+}
+
+.bg-overlay {
+  position: absolute; 
+  top: 0; right: 0; bottom: 0; left: 0;  
+  z-index: 1;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));   
+}

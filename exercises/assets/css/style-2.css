@@ -1,0 +1,29 @@
+/* global.css: Basic styles for the entire site */
+body {
+  margin: 0;
+  padding: 5px;
+  background-color: #800080;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  color: white;
+}
+.container p {
+  color: white;
+}
+a {
+  color: white;
+}
+@media only screen and (min-width: 200px) and (max-width: 1700px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

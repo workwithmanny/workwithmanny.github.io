@@ -1,0 +1,44 @@
+/* global.css: Basic styles for the entire site */
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: blue;
+}
+p {
+  color: #2243b2;
+}
+a {
+  margin: 0 10px;
+  color: #007acc;
+}
+.section-1 {
+  background-color: lemonchiffon;
+  padding: 1px;
+}
+.section-2 {
+  background-color: lightgreen;
+  padding: 1px;
+}
+.section-3 {
+  background-color: lightblue;
+  padding: 1px;
+}
+.section-4 {
+  background-color: darkblue;
+  padding: 1px;
+}
+.section-5 {
+  background-color: lightcoral;
+  padding: 1px;
+}
+@media only screen and (min-width: 200px) and (max-width: 1700px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

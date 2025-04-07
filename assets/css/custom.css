@@ -1,0 +1,17 @@
+
+h1::first-letter { font-size: 80px; font-weight: bold; color: #ffffff; }
+h1 { font-family: 'Roboto', sans-serif; font-size: 36px; color: #000000; }
+
+
+header .col-text h2, .col-1 > h3 { line-height: 1.8 }
+h2 { font-family: 'Lobster', cursive; font-size: 40px; color: #ffffff; }
+
+
+header.theme-dark { background-color: #1a6e00 }
+header.theme-dark h1 span.highlight { color: var(--red-900) }
+header.theme-dark .container-btn a.btn:nth-child(2):link,
+header.theme-dark .container-btn a.btn:nth-child(2):visited { color: var(--white-000) }
+
+header.theme-dark h2 { color: #ffffff }
+
+footer.theme-dark   { background-color: #1a6e00 }
